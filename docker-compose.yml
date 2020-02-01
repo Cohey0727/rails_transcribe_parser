@@ -4,6 +4,6 @@ services:
     build: .
     container_name: transcribe_web
     volumes:
-      - .:/transcribe
+      - ./transcribe:/usr/transcribe
     ports:
       - "3000:3000"
