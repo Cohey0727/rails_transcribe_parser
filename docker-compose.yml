@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    build: .
+    build: ./transcribe
     container_name: transcribe_web
     volumes:
       - ./transcribe:/usr/transcribe

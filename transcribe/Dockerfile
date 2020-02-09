@@ -5,10 +5,10 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
 
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client yarn
 
-RUN mkdir /usr/transcribe
-WORKDIR /usr/transcribe
+RUN mkdir /usr/app
+WORKDIR /usr/app
 
-COPY transcribe/ ./
+COPY . .
 RUN bundle install
 
 EXPOSE 3000
